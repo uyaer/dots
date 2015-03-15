@@ -1,0 +1,11 @@
+{
+    "packageUrl" : "http://tree.aliapp.com/dots",
+    "remoteManifestUrl" : "http://tree.aliapp.com/dots/project.manifest",
+    "remoteVersionUrl" : "http://tree.aliapp.com/dots/version.manifest",
+    "version" : "1.0.0",
+    "groupVersions" : {
+        "1" : "1.0.0"
+    },
+    "engineVersion" : "3.3",
+    "searchPaths" : [
+    ]}

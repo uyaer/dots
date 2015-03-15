@@ -1,0 +1,27 @@
+<UserData>
+  <OpenedDocuments>
+    <FilePathData Path="MainScene.csd" />
+  </OpenedDocuments>
+  <ActiveDocument Path="MainScene.csd" />
+  <Properties>
+    <Item Key="PackageParamsKey">
+      <Value ctype="PackageParams">
+        <LuaIsEncrypt Value="False" />
+        <LuaEncryptKey Value="" />
+        <LuaEncryptSign Value="" />
+        <Android_PackageName Value="com.uyaer.dots" />
+        <AndroidkeyStore Value="/Users/hc/Desktop/android p12.keystore" />
+        <AndroidVersion Value="android-19" />
+        <iOS_Target Value="dots iOS" />
+        <iOS_BundleID Value="" />
+        <Platform Value="Android" />
+        <PublishSetting Value="Resource" />
+        <FrameworkVersion Value="cocos2d-x-3.4" />
+        <IsDebugKeystore Value="False" />
+        <KeystorePassword Value="uyaer1234567890" />
+        <KeystoreAliasName Value="uyaer" />
+        <KeystoreAliasPassword Value="uyaer1234567890" />
+      </Value>
+    </Item>
+  </Properties>
+</UserData>

@@ -51,11 +51,19 @@ cc.log = console.log;
 
 cc.game.onStart = function(){
     cc.view.adjustViewPort(true);
-    cc.view.setDesignResolutionSize(640, 960, cc.ResolutionPolicy.SHOW_ALL);
+    cc.view.setDesignResolutionSize(1080, 1920, cc.ResolutionPolicy.SHOW_ALL);
     cc.view.resizeWithBrowserSize(true);
     //load resources
 
-    var scene = new AssetsManagerLoaderScene();
-    scene.run();
+    if(cc.sys.isNative){
+        var scene = new AssetsManagerLoaderScene();
+        scene.run();
+    }else{
+        cc.loader.load(g_resources,function(){
+            var scene = new AssetsManagerLoaderScene();
+            scene.run();
+        });
+    }
+
 };
 cc.game.run();

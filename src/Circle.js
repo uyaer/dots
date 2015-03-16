@@ -45,14 +45,19 @@ var CirType = {
     /**
      * 由7个产生，可以消灭指定的颜色块的所有点
      */
-    DEVOUR_ONE_COLOR: 107
+    COLORFUL: 107
 }
 
 var Circle = cc.Node.extend({
     /**
      * Circle类型
      */
-    _type: CirType.NONE
+    _type: CirType.NONE,
+
+    ctor: function () {
+        this._super();
+    },
+
     /**
      * 获得Cir的type
      * @returns {number}
@@ -72,18 +77,28 @@ var ColorCircle = Circle.extend({
     /**
      * 颜色
      */
-    color: 1,
+    dotColor: 1,
+    /**
+     * 显示的图片
+     * @type cc.Sprite
+     */
+    sprite: null,
     ctor: function (c) {
         this._super();
 
-        this.color = c || CirType.COLOR_RED;
+        this.dotColor = c || CirType.COLOR_RED;
+
+        this.sprite = new cc.Sprite("#cirs/cir_" + this.dotColor + ".png");
+        this.sprite.anchorX = 0;
+        this.sprite.anchorY = 0;
+        this.addChild(this.sprite);
     },
     /**
      * 获得Cir的type，颜色小圆点是总类，所有返回对应的颜色值
      * @returns {number}
      */
     getCirType: function () {
-        this.color;
+        this.dotColor;
     }
 });
 
@@ -101,6 +116,16 @@ var ColorBothCircle = Circle.extend({
      * 颜色2
      */
     color2: 2,
+    /**
+     * 左边的颜色块
+     * @type cc.Sprite
+     */
+    sprite2: null,
+    /**
+     * 右边的颜色块
+     * @type cc.Sprite
+     */
+    sprite1: null,
     ctor: function (c1, c2) {
         this._super();
 
@@ -108,6 +133,17 @@ var ColorBothCircle = Circle.extend({
 
         this.color1 = c1 || CirType.COLOR_RED;
         this.color2 = c2 || CirType.COLOR_GREEN;
+
+        this.sprite1 = new cc.Sprite("#cirs/cir_half_" + this.color1 + ".png")
+        this.sprite2 = new cc.Sprite("#cirs/cir_half_" + this.color2 + ".png")
+        this.sprite1.anchorX = 0;
+        this.sprite1.anchorY = 0;
+        this.sprite2.anchorX = 1;
+        this.sprite2.anchorY = 0;
+        this.sprite2.flippedX = true;
+        this.addChild(this.sprite1);
+        this.addChild(this.sprite2);
+
     }
 });
 
@@ -117,11 +153,47 @@ var ColorBothCircle = Circle.extend({
  * ================================= 102,103,104  ==================================
  */
 var ClearCircle = Circle.extend({
-
-    ctor: function (c) {
+    /**
+     * 清除的下面的颜色
+     */
+    dotColor: 0,
+    /**
+     * 下面的颜色图片
+     * @type cc.Sprite
+     */
+    sprite: null,
+    /**
+     * 上面的方向图片
+     * @type cc.Sprite
+     */
+    topSprite: null,
+    ctor: function (t, c) {
         this._super();
 
-        this._type = c || CirType.CLEAR_LINE;
+        this._type = t || CirType.CLEAR_LINE;
+        this.dotColor = c || CirType.COLOR_RED;
+
+        this.sprite = new cc.Sprite("#cir_" + this.dotColor + ".png");
+        this.sprite.anchorX = 0;
+        this.sprite.anchorY = 0;
+        this.addChild(this.sprite);
+
+        var name = "";
+        switch (this._type) {
+            case CirType.CLEAR_LINE:
+                name = "#cirs/cir_clear_col.png";
+                break;
+            case CirType.CLEAR_COL:
+                name = "#cirs/cir_clear_line.png";
+                break;
+            case CirType.CLEAR_BOTH:
+                name = "#cirs/cir_clear_both.png";
+                break;
+        }
+        this.topSprite = new cc.Sprite(name);
+        this.topSprite.anchorX = 0;
+        this.topSprite.anchorX = 0;
+        this.addChild(this.topSprite, 1);
     }
 });
 
@@ -131,11 +203,24 @@ var ClearCircle = Circle.extend({
  * ================================= 105,106  ==================================
  */
 var BobCircle = Circle.extend({
-
+    /**
+     * @type cc.Sprite
+     */
+    sprite: null,
     ctor: function (c) {
         this._super();
 
         this._type = c || CirType.BOB_3X3;
+
+        var name = "#cirs/cir_bobx3.png";
+        if (this._type == CirType.BOB_5X5) {
+            name = "#cirs/cir_bobx5.png";
+        }
+
+        this.sprite = new cc.Sprite(name);
+        this.sprite.anchorX = 0;
+        this.sprite.anchorY = 0;
+        this.addChild(this.sprite);
     }
 });
 
@@ -144,11 +229,19 @@ var BobCircle = Circle.extend({
  * ================================= 清除1种颜色  ==================================
  * ================================= 107  ==================================
  */
-var DevourCircle = Circle.extend({
-
+var ColorfulCircle = Circle.extend({
+    /**
+     * @type cc.Sprite
+     */
+    sprite: null,
     ctor: function () {
         this._super();
 
-        this._type = CirType.DEVOUR_ONE_COLOR;
+        this._type = CirType.COLORFUL;
+
+        this.sprite = new cc.Sprite("#cirs/cir_colorful.png");
+        this.sprite.anchorX = 0;
+        this.sprite.anchorY = 0;
+        this.addChild(this.sprite);
     }
 });

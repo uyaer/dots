@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>cirs/cir_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,2},{100,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>cirs/cir_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,106},{100,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>cirs/cir_3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,210},{100,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>cirs/cir_4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,314},{100,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>cirs/cir_5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,418},{100,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>cirs/cir_bobx3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,522},{100,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>cirs/cir_bobx5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,626},{100,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>cirs/cir_clear_both.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,834},{78,78}}</string>
+				<key>offset</key>
+				<string>{1,-1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>cirs/cir_clear_col.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{84,834},{30,78}}</string>
+				<key>offset</key>
+				<string>{-1,-1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>cirs/cir_clear_line.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{106,210},{78,30}}</string>
+				<key>offset</key>
+				<string>{1,-1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>cirs/cir_colorful.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,730},{100,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
+			</dict>
+			<key>cirs/cir_half_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,916},{50,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{50,100}</string>
+			</dict>
+			<key>cirs/cir_half_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{56,916},{50,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{50,100}</string>
+			</dict>
+			<key>cirs/cir_half_3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{110,916},{50,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{50,100}</string>
+			</dict>
+			<key>cirs/cir_half_4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{106,2},{50,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{50,100}</string>
+			</dict>
+			<key>cirs/cir_half_5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{106,106},{50,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{50,100}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>cir_plist.png</string>
+			<key>realTextureFileName</key>
+			<string>cir_plist.png</string>
+			<key>size</key>
+			<string>{186,1018}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>186</integer>
+			<key>height</key>
+			<integer>1018</integer>
+		</dict>
+	</dict>
+</plist>

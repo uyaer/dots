@@ -1,33 +1,25 @@
+var Game = cc.Layer.extend({
 
-var HelloWorldLayer = cc.Layer.extend({
-    sprite:null,
-    ctor:function () {
-        //////////////////////////////
-        // 1. super init first
+    ctor: function () {
         this._super();
 
-        /////////////////////////////
-        // 2. add a menu item with "X" image, which is clicked to quit the program
-        //    you may modify it.
-        // ask the window size
-        var size = cc.winSize;
+        cc.spriteFrameCache.addSpriteFrames(res.cir_plist, res.cir_png);
 
-        var mainscene = ccs.load(res.MainScene_json);
-        this.addChild(mainscene.node);
-
-        //var gril = new cc.Sprite("res/girl.jpg");
-        //gril.anchorX = 0;
-        //gril.anchorY = 0;
-        //this.addChild(gril);
-
-        return true;
+        for (var i = 0; i < Row; i++) {
+            for (var j = 0; j < Col; j++) {
+                var cir = new ColorCircle(randomInt(1, 5));
+                cir.x = 120 * j;
+                cir.y = 120 * i;
+                this.addChild(cir);
+            }
+        }
     }
 });
 
-var HelloWorldScene = cc.Scene.extend({
-    onEnter:function () {
+var GameScene = cc.Scene.extend({
+    onEnter: function () {
         this._super();
-        var layer = new HelloWorldLayer();
+        var layer = new Game();
         this.addChild(layer);
     }
 });

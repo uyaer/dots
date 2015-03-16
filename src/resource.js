@@ -1,6 +1,6 @@
 var res = {
-    HelloWorld_png : "res/HelloWorld.png",
-    MainScene_json : "res/MainScene.json"
+    cir_plist : "res/cir_plist.plist",
+    cir_png : "res/cir_plist.png"
 };
 
 var g_resources = [];

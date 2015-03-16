@@ -1,0 +1,24 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Type="Plist" Name="cir_plist" ID="b43bdee4-36dd-4c80-9a5c-9642aa57d876" Version="2.1.5.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="False" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="cirs/cir_1.png" />
+      <FilePathData Path="cirs/cir_2.png" />
+      <FilePathData Path="cirs/cir_3.png" />
+      <FilePathData Path="cirs/cir_4.png" />
+      <FilePathData Path="cirs/cir_5.png" />
+      <FilePathData Path="cirs/cir_bobx3.png" />
+      <FilePathData Path="cirs/cir_bobx5.png" />
+      <FilePathData Path="cirs/cir_clear_both.png" />
+      <FilePathData Path="cirs/cir_clear_col.png" />
+      <FilePathData Path="cirs/cir_clear_line.png" />
+      <FilePathData Path="cirs/cir_colorful.png" />
+      <FilePathData Path="cirs/cir_half_1.png" />
+      <FilePathData Path="cirs/cir_half_2.png" />
+      <FilePathData Path="cirs/cir_half_3.png" />
+      <FilePathData Path="cirs/cir_half_4.png" />
+      <FilePathData Path="cirs/cir_half_5.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

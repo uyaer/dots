@@ -108,7 +108,7 @@ var AssetsManagerLoaderScene = cc.Scene.extend({
     loadGame: function () {
         cc.loader.loadJs(["src/files.js"], function (err) {
             cc.loader.loadJs(jsFiles, function (err) {
-                cc.director.runScene(new HelloWorldScene());
+                cc.director.runScene(new GameScene());
             });
         });
     },

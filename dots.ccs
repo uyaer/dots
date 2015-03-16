@@ -3,8 +3,25 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Project Name="MainScene.csd" Type="Scene" />
-        <Image Name="HelloWorld.png" />
+        <PlistInfo Name="cir_plist.csi" Type="Plist" />
+        <Folder Name="cirs">
+          <Image Name="cir_1.png" />
+          <Image Name="cir_2.png" />
+          <Image Name="cir_3.png" />
+          <Image Name="cir_4.png" />
+          <Image Name="cir_5.png" />
+          <Image Name="cir_bobx3.png" />
+          <Image Name="cir_bobx5.png" />
+          <Image Name="cir_clear_both.png" />
+          <Image Name="cir_clear_col.png" />
+          <Image Name="cir_clear_line.png" />
+          <Image Name="cir_colorful.png" />
+          <Image Name="cir_half_1.png" />
+          <Image Name="cir_half_2.png" />
+          <Image Name="cir_half_3.png" />
+          <Image Name="cir_half_4.png" />
+          <Image Name="cir_half_5.png" />
+        </Folder>
       </RootFolder>
     </Group>
   </SolutionFolder>

@@ -56,6 +56,8 @@ var Circle = cc.Node.extend({
 
     ctor: function () {
         this._super();
+
+        this.setContentSize(cc.size(CIR_SIZE,CIR_SIZE));
     },
 
     /**
@@ -66,6 +68,47 @@ var Circle = cc.Node.extend({
         return this._type;
     }
 });
+
+/**
+ * 根据 cirType生成不同的Circle
+ * @param cirType
+ * @param ...其他参数
+ */
+Circle.create = function(cirType){
+    if(cirType == CirType.COLOR_ANY){
+        cirType = randomInt(CirType.COLOR_RED,CirType.COLOR_YELLOW);
+    }
+
+    var cir = null;
+    switch (cirType){
+        case CirType.COLOR_RED:
+        case CirType.COLOR_GREEN:
+        case CirType.COLOR_BLUE:
+        case CirType.COLOR_PURPLE:
+        case CirType.COLOR_YELLOW:
+            cir = new ColorCircle(cirType);
+            break;
+        case Circle.COLOR_BOTH:
+            cir = new ColorBothCircle(cirType,arguments[1],arguments[2]);
+            break;
+        case Circle.CLEAR_LINE:
+        case Circle.CLEAR_COL:
+        case Circle.CLEAR_BOTH:
+            cir = new ClearCircle(cirType,arguments[1]);
+            break;
+        case Circle.BOB_3X3:
+        case Circle.BOB_5X5:
+            cir = new BobCircle(cirType);
+            break;
+        case Circle.COLORFUL:
+            cir = new ColorfulCircle();
+            break;
+        default :
+            cir = new Circle();
+            break;
+    }
+    return cir;
+}
 
 
 /**
@@ -98,7 +141,7 @@ var ColorCircle = Circle.extend({
      * @returns {number}
      */
     getCirType: function () {
-        this.dotColor;
+        return this.dotColor;
     }
 });
 

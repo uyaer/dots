@@ -55,6 +55,8 @@ cc.game.onStart = function(){
     cc.view.resizeWithBrowserSize(true);
     //load resources
 
+    WIN_H = cc.winSize.height;
+
     if(cc.sys.isNative){
         var scene = new AssetsManagerLoaderScene();
         scene.run();

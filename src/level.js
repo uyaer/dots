@@ -47,6 +47,10 @@ function LevelData() {
     this.boxSpace = function () {
         return this.gap() + CIR_SIZE;
     };
+
+    this.boxSpaceHalf = function(){
+        return int(this.boxSpace() * 0.5);
+    }
     /**
      * 顶部的距离
      */

@@ -21,6 +21,7 @@
           <Image Name="cir_half_3.png" />
           <Image Name="cir_half_4.png" />
           <Image Name="cir_half_5.png" />
+          <Image Name="cir_none.png" />
         </Folder>
       </RootFolder>
     </Group>

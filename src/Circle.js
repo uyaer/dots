@@ -54,10 +54,21 @@ var Circle = cc.Node.extend({
      */
     _type: CirType.NONE,
 
+    /**
+     * 不能走点图片
+     * @type cc.Sprite
+     */
+    sprite:null,
+
     ctor: function () {
         this._super();
 
         this.setContentSize(cc.size(CIR_SIZE,CIR_SIZE));
+
+        this.sprite = new cc.Sprite("#cirs/cir_none.png");
+        this.sprite.anchorX = 0;
+        this.sprite.anchorY = 0;
+        this.addChild(this.sprite);
     },
 
     /**
@@ -108,7 +119,24 @@ Circle.create = function(cirType){
             break;
     }
     return cir;
-}
+};
+
+Circle.checkColorIsSame=function(cir1,cir2){
+    var arr1 = Circle.getDotColor(cir1);
+    var arr2 = Circle.getDotColor(cir2);
+
+    return isSameElTowArray(arr1, arr2);
+};
+Circle.getDotColor = function(cir){
+    if(cir instanceof ColorCircle){
+        return [cir.dotColor];
+    }else if(cir instanceof ColorBothCircle){
+        return [cir.color1,cir.color2];
+    }else if(cir instanceof ClearCircle){
+        return [cir.dotColor];
+    }
+    return [];
+};
 
 
 /**
@@ -143,6 +171,8 @@ var ColorCircle = Circle.extend({
     getCirType: function () {
         return this.dotColor;
     }
+
+
 });
 
 /**

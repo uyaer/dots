@@ -18,6 +18,7 @@
       <FilePathData Path="cirs/cir_half_3.png" />
       <FilePathData Path="cirs/cir_half_4.png" />
       <FilePathData Path="cirs/cir_half_5.png" />
+      <FilePathData Path="cirs/cir_none.png" />
     </ImageFiles>
     <MaxSize Width="1024" Height="1024" />
   </Content>

@@ -84,7 +84,7 @@
 			<key>cirs/cir_clear_both.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{2,834},{78,78}}</string>
+				<string>{{2,938},{78,78}}</string>
 				<key>offset</key>
 				<string>{1,-1}</string>
 				<key>rotated</key>
@@ -95,7 +95,7 @@
 			<key>cirs/cir_clear_col.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{84,834},{30,78}}</string>
+				<string>{{84,938},{30,78}}</string>
 				<key>offset</key>
 				<string>{-1,-1}</string>
 				<key>rotated</key>
@@ -106,7 +106,7 @@
 			<key>cirs/cir_clear_line.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{106,210},{78,30}}</string>
+				<string>{{106,522},{78,30}}</string>
 				<key>offset</key>
 				<string>{1,-1}</string>
 				<key>rotated</key>
@@ -128,7 +128,7 @@
 			<key>cirs/cir_half_1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{2,916},{50,100}}</string>
+				<string>{{106,2},{50,100}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -139,7 +139,7 @@
 			<key>cirs/cir_half_2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{56,916},{50,100}}</string>
+				<string>{{106,106},{50,100}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -150,7 +150,7 @@
 			<key>cirs/cir_half_3.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{110,916},{50,100}}</string>
+				<string>{{106,210},{50,100}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -161,7 +161,7 @@
 			<key>cirs/cir_half_4.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{106,2},{50,100}}</string>
+				<string>{{106,314},{50,100}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -172,13 +172,24 @@
 			<key>cirs/cir_half_5.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{106,106},{50,100}}</string>
+				<string>{{106,418},{50,100}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
 				<string>{50,100}</string>
+			</dict>
+			<key>cirs/cir_none.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,834},{100,100}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{100,100}</string>
 			</dict>
 		</dict>
 		<key>metadata</key>

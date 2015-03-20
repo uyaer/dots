@@ -17,7 +17,7 @@ function int(val) {
  * @returns {*}
  */
 function randomInt(min, max) {
-    return min + Math.ceil(Math.random() * (max - min));
+    return min + Math.round(Math.random() * (max - min));
 }
 
 /**
@@ -29,4 +29,28 @@ function randomInt(min, max) {
  */
 function limit(val, min, max) {
     return Math.min(max, Math.max(val, min));
+}
+
+/**
+ * 判断元素是否在数组中
+ * @param el {*}
+ * @param arr {Array}
+ * @returns {boolean}
+ */
+function isElinArray(el,arr){
+    return arr.indexOf(el) !=-1;
+}
+
+/**
+ * 2个数组中是否有相同元素
+ * @param arr1
+ * @param arr2
+ * @returns {boolean}
+ */
+function isSameElTowArray(arr1,arr2){
+    for(var i = 0 ; i < arr1.length ; i++){
+        var flag = isElinArray(arr1[i], arr2);
+        if(flag)return true;
+    }
+    return false;
 }

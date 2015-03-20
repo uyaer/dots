@@ -47,6 +47,14 @@ var Box = cc.Node.extend({
     },
 
     /**
+     * 是否是不可移动到点
+     * @returns {boolean}
+     */
+    isCantMove:function(){
+        return this.cir.getCirType() == CirType.NONE;
+    },
+
+    /**
      * 原始坐标 X
      */
     originalX: function () {
@@ -112,6 +120,7 @@ var Box = cc.Node.extend({
      * 返回原始位置
      */
     backToOriginal: function () {
+        this.stopAllActions();
         this.runAction(cc.moveTo(0.25, this.originalX(), this.originalY()));
         this.offCol = 0;
         this.offRow = 0;
@@ -121,8 +130,9 @@ var Box = cc.Node.extend({
      * 飞翔预览位置
      */
     flyToPreview: function () {
+        this.stopAllActions();
         var lvData = LevelManager.instance.lvData;
-        var move = cc.moveBy(0.125, lvData.boxSpace() * this.offCol, lvData.boxSpace() * this.offRow);
+        var move = cc.moveTo(0.125, lvData.boxSpace() * this.offCol+this.originalX(), this.originalY()-lvData.boxSpace() * this.offRow);
         this.runAction(move);
     }
 

@@ -58,17 +58,21 @@ var Circle = cc.Node.extend({
      * 不能走点图片
      * @type cc.Sprite
      */
-    sprite:null,
+    sprite_no:null,
 
     ctor: function () {
         this._super();
 
         this.setContentSize(cc.size(CIR_SIZE,CIR_SIZE));
 
-        this.sprite = new cc.Sprite("#cirs/cir_none.png");
-        this.sprite.anchorX = 0;
-        this.sprite.anchorY = 0;
-        this.addChild(this.sprite);
+
+    },
+
+    initNo:function(){
+        this.sprite_no = new cc.Sprite("#cirs/cir_none.png");
+        this.sprite_no.anchorX = 0;
+        this.sprite_no.anchorY = 0;
+        this.addChild(this.sprite_no);
     },
 
     /**
@@ -99,23 +103,24 @@ Circle.create = function(cirType){
         case CirType.COLOR_YELLOW:
             cir = new ColorCircle(cirType);
             break;
-        case Circle.COLOR_BOTH:
+        case CirType.COLOR_BOTH:
             cir = new ColorBothCircle(cirType,arguments[1],arguments[2]);
             break;
-        case Circle.CLEAR_LINE:
-        case Circle.CLEAR_COL:
-        case Circle.CLEAR_BOTH:
+        case CirType.CLEAR_LINE:
+        case CirType.CLEAR_COL:
+        case CirType.CLEAR_BOTH:
             cir = new ClearCircle(cirType,arguments[1]);
             break;
-        case Circle.BOB_3X3:
-        case Circle.BOB_5X5:
+        case CirType.BOB_3X3:
+        case CirType.BOB_5X5:
             cir = new BobCircle(cirType);
             break;
-        case Circle.COLORFUL:
+        case CirType.COLORFUL:
             cir = new ColorfulCircle();
             break;
         default :
             cir = new Circle();
+            cir.initNo();
             break;
     }
     return cir;
@@ -134,6 +139,8 @@ Circle.getDotColor = function(cir){
         return [cir.color1,cir.color2];
     }else if(cir instanceof ClearCircle){
         return [cir.dotColor];
+    }else if(cir instanceof ColorfulCircle){
+        return [CirType.COLOR_RED,CirType.COLOR_GREEN,CirType.COLOR_BLUE,CirType.COLOR_PURPLE,CirType.COLOR_YELLOW];
     }
     return [];
 };
@@ -246,7 +253,7 @@ var ClearCircle = Circle.extend({
         this._type = t || CirType.CLEAR_LINE;
         this.dotColor = c || CirType.COLOR_RED;
 
-        this.sprite = new cc.Sprite("#cir_" + this.dotColor + ".png");
+        this.sprite = new cc.Sprite("#cirs/cir_" + this.dotColor + ".png");
         this.sprite.anchorX = 0;
         this.sprite.anchorY = 0;
         this.addChild(this.sprite);
@@ -264,8 +271,8 @@ var ClearCircle = Circle.extend({
                 break;
         }
         this.topSprite = new cc.Sprite(name);
-        this.topSprite.anchorX = 0;
-        this.topSprite.anchorX = 0;
+        this.topSprite.x = CIR_SIZE * 0.5;
+        this.topSprite.y = CIR_SIZE * 0.5;
         this.addChild(this.topSprite, 1);
     }
 });

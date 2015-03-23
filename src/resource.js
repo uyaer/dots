@@ -1,6 +1,7 @@
 var res = {
-    cir_plist : "res/cir_plist.plist",
-    cir_png : "res/cir_plist.png"
+    cir_plist: "res/cir_plist.plist",
+    cir_png: "res/cir_plist.png",
+    bg: "res/bg.png"
 };
 
 var g_resources = [];

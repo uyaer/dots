@@ -23,6 +23,7 @@
           <Image Name="cir_half_5.png" />
           <Image Name="cir_none.png" />
         </Folder>
+        <Image Name="bg.png" />
       </RootFolder>
     </Group>
   </SolutionFolder>
